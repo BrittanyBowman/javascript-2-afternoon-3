@@ -1,36 +1,15 @@
-/* 
-  Once you complete a problem, refresh ./SpecRunner.html in your browser and check to see if the problem's test(s) are passing.
-  Passed tests will be indicated by a green circle.
-  Failed tests will be indicated by a red X.
-
-  You can refresh the page at any time to re-run all the tests.
-
-  In this repo your job is to write functions to make each function call work properly.
-
-  Here's an example of code that will be given to you:
-
-  sayHi('Hi Katie', function(thingToSay){
-    alert(thingToSay);
-  });
-
-  It would be your job to create the sayHi function:
-
-  var sayHi = function(str, cb){
-    cb(str);
-  }
-*/
-
 ////////// PROBLEM 1 //////////
 
 /*
   Write a function called first that takes in two parameters, an array and a callback function.
-  Then invoke the callback function, passing in the first element in the array as it's argument.
+  Then invoke the callback function, passing in the first element [0] in the array as it's argument.
 */
 
 // Code Here 
-function first(arr, callback){
-  callback(arr[0]);
+function first(arr, cb){
+  cb(arr[0]);
 }
+
 // Do not edit the code below.
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 
@@ -39,9 +18,6 @@ first(names, function(firstName){
   return firstName;
 });
 // Do not edit the code above.
-
-
-
 ////////// PROBLEM 2 //////////
 
 /*
@@ -50,8 +26,8 @@ first(names, function(firstName){
 */
 
 //Code Here
-function last(names, callback2){
-  callback2(names.pop());
+function last(names, cb2){
+  cb2(names.pop());
 }
 // Do not edit the code below.
 last(names, function(lastName){
@@ -70,8 +46,8 @@ last(names, function(lastName){
 */
 
 //Code Here
-function multiply(p1,p2,callback3){
-  callback3(p1*p2);
+function multiply(p1,p2,cb3){
+  cb3(p1*p2);
 }
 // Do not edit the code below.
 multiply(4, 3, function(answer){
@@ -91,12 +67,12 @@ multiply(4, 3, function(answer){
 */
 
 //Code Here 
-function contains(arr4, name4, callback4){
+function contains(arr4, name4, cb4){
   for (var i = 0;i<arr4.length;i++){
 if (arr4[i]===name4){
-  callback4(true);
+  cb4(true);
 } else {
-  callback4(false);
+  cb4(false);
 }
 }}
 // Do not edit the code below.
